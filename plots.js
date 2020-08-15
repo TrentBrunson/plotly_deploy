@@ -79,3 +79,18 @@ var layout = {
 Plotly.newPlot("piePlot", data, layout);
 
 // ************************************************
+var trace = {
+    x: ["burrito", "pizza", "chicken"],
+    y: [10, 18, 5],
+    mode: "markers",
+    type: "scatter",
+    name: "Lunch Orders",
+    text: ["Burrito", "Pizza", "Csssshicken"],
+    marker: {size: 24}
+ };
+var layout = {
+    title: "Luncheon Survey",
+    xaxis: {title: "Food Option"},
+    yaxis: {title: "Number of Respondents"}
+};
+Plotly.newPlot("scatterPlot", [trace], layout);
