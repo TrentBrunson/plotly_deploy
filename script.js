@@ -31,11 +31,12 @@ console.log(Object.entries(researcher1));
 // This method iterates through each element in an array. In this case, there are smaller arrays, each including two elements, inside an outer array. 
 // To access these elements, the argument ([first, second]) is used, where first and second are arbitrarily chosen for convenience. 
 // They could have been named ([x, y]) or ([key, value]).
-researcher1.forEach(([first, second]) => console.log(first + ": " + second));
+researcher2 = [['name', 'Roza'], ['age', 34], ['hobby',
+'Hiking']];
+researcher2.forEach(([first, second]) => console.log(first + ": " + second));
 
 d3.json("samples.json").then(function(data){
-    firstPerson = data.metadata[0];
-    Object.entries(firstPerson).forEach(([key, value]) => {console.log(key + ': ' + value);});
+    firstPerson = data.metadata[101];
+    Object.entries(firstPerson).forEach(([key, value]) => 
+    console.log(key + ': ' + value));
 });
-
-console.log(firstPerson);
