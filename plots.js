@@ -77,3 +77,5 @@ var layout = {
     tile: "'Bar' (lol) Chart"
 };
 Plotly.newPlot("piePlot", data, layout);
+
+// ************************************************
