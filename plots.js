@@ -94,3 +94,108 @@ var layout = {
     yaxis: {title: "Number of Respondents"}
 };
 Plotly.newPlot("scatterPlot", [trace], layout);
+
+// var numbers = [1,2,3,4,5];
+// var doubled = numbers.map(function(num){
+//     return num * 2;
+// // var doubled = numbers.map(dub => dub*2)
+// });
+// console.log(doubled);
+
+// var nums = [0,2,4,6,8,10]
+// var plus5 = nums.map(num => num+5)
+// console.log(plus5)
+
+cities = [
+    {
+      "Rank": 1,
+      "City": "San Antonio ",
+      "State": "Texas",
+      "Increase_from_2016": "24208",
+      "population": "1511946"
+    },
+    {
+      "Rank": 2,
+      "City": "Phoenix ",
+      "State": "Arizona",
+      "Increase_from_2016": "24036",
+      "population": "1626078"
+    },
+    {
+      "Rank": 3,
+      "City": "Dallas",
+      "State": "Texas",
+      "Increase_from_2016": "18935",
+      "population": "1341075"
+    }
+];
+
+cityNames = cities.map(function(city){return city.City;});
+console.log(cityNames);
+
+// return population instead
+// only needed to change the Key to return; could've change var cityNames to cityPopulation
+// to help keep things clear; then also change the function arg to pop or something
+// more representative of the change
+cities = [
+    {
+      "Rank": 1,
+      "City": "San Antonio ",
+      "State": "Texas",
+      "Increase_from_2016": "24208",
+      "population": "1511946"
+    },
+    {
+      "Rank": 2,
+      "City": "Phoenix ",
+      "State": "Arizona",
+      "Increase_from_2016": "24036",
+      "population": "1626078"
+    },
+    {
+      "Rank": 3,
+      "City": "Dallas",
+      "State": "Texas",
+      "Increase_from_2016": "18935",
+      "population": "1341075"
+    }
+];
+
+cityNames = cities.map(function(city){return city.population;});
+console.log(cityNames);
+
+var numbers = [1,2,3,4,5];
+
+var larger = numbers.filter(function(num){
+    return num > 1;
+});
+console.log(larger);
+
+// skill drill filter words starting with 's'
+var words = ['seal', 'dog', 'scorpion', 'orangutan', 'salamander'];
+var word_S = words.filter(word => word.startsWith("s"));
+console.log(word_S);
+
+// sort by age ascending
+// ompares one element of the array (a) with another element in the array (b). 
+// From a, it subtracts b. If the result is negative (i.e., b is larger than a) then it stays put
+var familyAge = [3,2,39,37,9];
+sortedAge = familyAge.sort((a,b) => a - b);
+console.log(sortedAge);
+
+// sort by age descending
+var familyAge = [3,2,39,37,9];
+sortedAge = familyAge.sort((a,b) => a - b).reverse();
+console.log(sortedAge);
+// descending byreversing ordered pair calculation
+var familyAge = [3,2,39,37,9];
+sortedAge = familyAge.sort((a,b) => b - a);
+console.log(sortedAge);
+
+// slice an array
+var words = ['seal', 'dog', 'scorpion', 'orangutan', 'salamander'];
+slicer = words.slice(0,3);
+console.log(slicer);
+
+var words = ['seal', 'dog', 'scorpion', 'orangutan', 'salamander'];
+console.log(words.slice(3, ));
