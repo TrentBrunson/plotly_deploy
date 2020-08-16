@@ -1,42 +1,22 @@
-d3.json("samples.json").then(function(data){console.log(data);});
+d3.selectAll("body").on("change", updatePage);
 
-// extract only wash frequency of 2x per week
-d3.json("samples.json").then(function(data){
-    wfreq = data.metadata.map(person => person.wfreq);
-    console.log(wfreq);
-});
+function updatePage() {
+  var dropdownMenu = d3.selectAll("#selectOption").node();
+  var dropdownMenuID = dropdownMenu.id;
+  var selectedOption = dropdownMenu.value;
+//   get text of selection
+  var sel = document.getElementById("selectOption");
+  var text= sel.options[sel.selectedIndex].text;
+// or...
+  test = document.getElementById('selectOption').selectedOptions[0].text
 
-// descending sort of wash frequency
-d3.json("samples.json").then(function(data){
-    wfreq = data.metadata.map(person => person.wfreq).sort((a,b) => b - a);
-    console.log(wfreq);
-});
 
-// filter null values found in wash frequency
-d3.json("samples.json").then(function(data){
-    wfreq = data.metadata.map(person => person.wfreq).sort((a,b) => b - a);
-    filteredWfreq = wfreq.filter(element => element != null);
-    console.log(filteredWfreq);
-});
+  console.log(dropdownMenuID);
+  console.log(selectedOption);
+  console.log(d3.selectAll("#menu").node().id);
+  console.log(dropdownMenu.textContent);
 
-// using entries to return both of objext's keys and values
-researcher1 = {
-    name: 'Roza',
-    age: 34,
-    hobby: 'Hiking'
+  console.log(text);
+  console.log(test);
 };
 
-console.log(Object.entries(researcher1));
-
-// This method iterates through each element in an array. In this case, there are smaller arrays, each including two elements, inside an outer array. 
-// To access these elements, the argument ([first, second]) is used, where first and second are arbitrarily chosen for convenience. 
-// They could have been named ([x, y]) or ([key, value]).
-researcher2 = [['name', 'Roza'], ['age', 34], ['hobby',
-'Hiking']];
-researcher2.forEach(([first, second]) => console.log(first + ": " + second));
-
-d3.json("samples.json").then(function(data){
-    firstPerson = data.metadata[101];
-    Object.entries(firstPerson).forEach(([key, value]) => 
-    console.log(key + ': ' + value));
-});
