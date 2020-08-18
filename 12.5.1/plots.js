@@ -17,7 +17,7 @@ var trace1 = {
   name: "Greek",
   type: "bar",
   orientation: "h"
-};
+}; 
 
 // data
 var data = [trace1];
