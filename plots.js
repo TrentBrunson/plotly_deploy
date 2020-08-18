@@ -13,9 +13,6 @@ function init() {
   })
 }
 init();
-// function optionChanged(newSample) {
-//   console.log(newSample);
-// }
 
 function optionChanged(newSample) {
   buildMetadata(newSample);
@@ -98,6 +95,7 @@ function buildBubbleChart(sample) {
     Plotly.newPlot('bubble', bubble_trace, bubble_layout)
   });
 }
+
 // build gauge chart to show wash frequency
 function buildGaugeChart(sample) {
   d3.json("samples.json").then((data) => {
@@ -108,7 +106,7 @@ function buildGaugeChart(sample) {
     var washFreq = result.wfreq;
     console.log(washFreq);
 
-      // load data for plotting
+  // load data for plotting
   var trace = [{
     domain: { x: [0, 1], y: [0, 1] },
     value: washFreq,
@@ -120,8 +118,7 @@ function buildGaugeChart(sample) {
       axis: { range: [null, 10] },
       bar: { color: "red" }
     }
-  }
-  ];
+  }];
 
   // format plot area
   var layout = { width: 500, height: 400 };
@@ -129,7 +126,3 @@ function buildGaugeChart(sample) {
   Plotly.newPlot('gauge', trace, layout);
   });
   }
-
-
-// });
-// }
