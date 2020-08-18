@@ -79,7 +79,7 @@ function buildBubbleChart(sample){
   }];
   var bubble_layout = {
     title: "OTU ID",
-    // showlegend: false
+    showlegend: false
   };
   Plotly.newPlot('bubble', bubble_trace, bubble_layout)
   });
