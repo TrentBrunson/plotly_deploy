@@ -1,7 +1,7 @@
 ## Public, interavtive page created to showcase data for volunteers.
 ### Overview 
 ---
-#####  Customer requested a dashboard for study volunteers to look up their anonimized data so they could contemplate their navel and its microbial contents.  Just when you thought the internet had it all, this now shines a light that even a the deepest recesses of a belly button could hide; there now exists a new level of navel-gazing - now powered through the internet.
+#####  Customer requested a dashboard for study volunteers to look up their anonimized data so they could contemplate their navel and its microbial contents.  Just when you thought the internet had it all, this now shines a light that even the deepest recesses of a belly button could not hide; there now exists a new level of navel-gazing - now powered through the internet.
 
 
 ### Resources  
